@@ -3,11 +3,11 @@ def NULL_not_found(object: any) -> int:
         print(f"Nothing: {object} {type(object)}")
         return 0
 
-    if object.__class__.__name__ == "float" and object != object:
+    if type(object) is float and object != object:
         print(f"Cheese: {object} {type(object)}")
         return 0
 
-    if object == 0 and object.__class__.__name__ == "int":
+    if object == 0 and type(object) is int:
         print(f"Zero: {object} {type(object)}")
         return 0
 
