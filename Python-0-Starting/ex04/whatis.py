@@ -10,4 +10,4 @@ elif len(sys.argv) == 2:
         else:
             print("I'm Odd.")
     except ValueError:
-        print("AssertionError: argument is not an integer")
+        print("AssertionError: argument is not an integer", file=sys.stderr)
