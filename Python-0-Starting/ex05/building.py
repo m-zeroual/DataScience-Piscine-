@@ -24,11 +24,29 @@ def count_characters(text):
     return upper, lower, punctuation, spaces, digits
 
 
+def ft_readline(prompt: str) -> str:
+    """Read input character by character until newline or EOF."""
+    if prompt:
+        print(prompt)
+    text = ""
+
+    while True:
+        char = sys.stdin.read(1)
+        if char == "":
+            break
+
+        text += char
+        if char == "\n":
+            break
+    return text
+
+
 def main():
     """Read a string and display its character statistics."""
     try:
         if len(sys.argv) == 1:
-            text = input("What is the text to count?\n")
+
+            text = ft_readline("What is the text to count?")
         elif len(sys.argv) == 2:
             text = sys.argv[1]
         else:

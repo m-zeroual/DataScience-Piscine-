@@ -1,16 +1,14 @@
 def all_thing_is_obj(object: any) -> int:
-    if object.__class__.__name__ == "list":
+    if type(object) is list:
         print(f"List : {type(object)}")
-    elif object.__class__.__name__ == "tuple":
+    elif type(object) is tuple:
         print(f"Tuple : {type(object)}")
-    elif object.__class__.__name__ == "set":
+    elif type(object) is set:
         print(f"Set : {type(object)}")
-    elif object.__class__.__name__ == "dict":
+    elif type(object) is dict:
         print(f"Dict : {type(object)}")
-    elif object.__class__.__name__ == "str":
+    elif type(object) is str:
         print(f"{object} is in the kitchen : {type(object)}")
     else:
         print("Type not found")
     return 42
-
-
