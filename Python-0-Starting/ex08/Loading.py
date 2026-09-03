@@ -5,7 +5,6 @@ def ft_tqdm(lst: range) -> None:
     """Display a progress bar while iterating over a range."""
     total = len(lst)
     width = os.get_terminal_size().columns
-    print("first call to ft_tqdm")
 
     for i, elem in enumerate(lst, 1):
         percent = int(i * 100 / total)
